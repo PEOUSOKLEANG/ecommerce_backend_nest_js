@@ -1,14 +1,14 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 // import * as dotenv from 'dotenv';
-import { HttpExceptionFilter } from './common/exceptions/filters/http-exception.filter';
+// import { HttpExceptionFilter } from './common/exceptions/filters/http-exception.filter';
 
 async function bootstrap() {
   // dotenv.config();
   const app = await NestFactory.create(AppModule);
 
   // Apply the exception filter globally
-  app.useGlobalFilters(new HttpExceptionFilter());
+  // app.useGlobalFilters(new HttpExceptionFilter());
 
   //enable request
   app.enableCors({
