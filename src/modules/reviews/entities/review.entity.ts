@@ -1,8 +1,13 @@
-import { Schema } from "@nestjs/mongoose";
+import { Prop, Schema } from '@nestjs/mongoose';
 
-@Schema({timestamps:true})
-
+@Schema({ timestamps: true })
 export class Review {
-    // rating 
+  @Prop()
+  rating: string;
 
+  @Prop()
+  comment: string;
+
+  //userID(Reviwer on the product)
+  //ProductID
 }

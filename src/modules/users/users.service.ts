@@ -5,9 +5,7 @@ import { User, UserDocument } from './entities/user.entity';
 
 @Injectable()
 export class UsersService {
-
   constructor(@InjectModel(User.name) private userModel: Model<UserDocument>) {}
-
 
   async createUser(data: Partial<User>): Promise<User> {
     const newUser = new this.userModel(data);
@@ -29,5 +27,4 @@ export class UsersService {
   async deleteUser(id: string): Promise<User | null> {
     return this.userModel.findByIdAndDelete(id).exec();
   }
-
 }

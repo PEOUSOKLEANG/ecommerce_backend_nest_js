@@ -3,7 +3,6 @@ import {
   Get,
   Post,
   Body,
-  Patch,
   Param,
   Delete,
   Put,
@@ -13,9 +12,8 @@ import { User } from './entities/user.entity';
 
 @Controller('users')
 
-
 // method to useFilters
-// @UseFilters(HttpExceptionFilter) 
+// @UseFilters(HttpExceptionFilter)
 // Apply to the entire controller
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}

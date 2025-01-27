@@ -11,12 +11,20 @@ import { ProductsModule } from './modules/products/products.module';
 import { ReviewsModule } from './modules/reviews/reviews.module';
 import { CategoriesModule } from './modules/categories/categories.module';
 
-
-
 @Module({
   imports: [
     MongooseModule.forRoot('mongodb://localhost:27017/ecommerce2025'),
-    UsersModule, SocialProfilesModule, CredentialsModule, OrdersModule, CartsModule, CartItemsModule, OrderLinesModule, ProductsModule, ReviewsModule, CategoriesModule],
+    UsersModule,
+    SocialProfilesModule,
+    CredentialsModule,
+    OrdersModule,
+    CartsModule,
+    CartItemsModule,
+    OrderLinesModule,
+    ProductsModule,
+    ReviewsModule,
+    CategoriesModule,
+  ],
   controllers: [],
   providers: [],
 })
